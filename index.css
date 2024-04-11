@@ -1,0 +1,586 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    height: 75px;
+    width: 100%;
+    background-color: aqua;
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.5);
+
+}
+
+nav>.first{
+    height:100%;
+    width: 50%;
+    background-color: rgb(203, 154, 81);
+    display: flex;
+    justify-content:flex-start;
+    align-items:center;
+    gap: 5%;
+
+}
+nav>.first>.icon{
+   
+    display: flex;
+    gap: 3px;
+    padding-left: 5px;
+   
+}
+nav>.first>.icon>ul{
+    font-weight: bold;
+    list-style-type: none;
+}
+.first>.Defect{
+    display: flex;
+    gap: 20px;
+     align-items: center;
+     font-size: 20px;
+}
+.Defect>#defect{
+    font-size:25px;
+    font-weight:bold;
+
+}
+/* .icon:hover{
+    transform: rotate(45deg);
+    
+} */
+nav>.second{
+    height:100%;
+    width: 50%;
+    background-color: rgb(203, 154, 81);
+    
+    
+   
+}
+nav>.second>ul{
+    list-style-type: none;
+    display: flex;
+    justify-content:end;
+    /* margin-left: 20%; */
+     padding-top:30px ;
+     gap: 10%;
+     padding-right: 10px;
+}
+nav>.second>ul>li>{
+    height:60px ;
+    width: 60px;
+   
+}
+/* nav>.second>ul>p{
+    display: flex;
+    flex-direction: ;
+} */
+nav>.second>ul>li>i{
+   
+    font-size: 30px;
+    background-color:  rgb(215, 134, 12);
+   
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.5);
+}
+input{
+    height: 30px;
+    width: 200px;
+    font-size: 20px;
+    border-radius: 4px;
+   color: rgb(71, 68, 68);
+}
+
+
+/* from here main body of html css start */
+.body{
+    margin-top: 300px;
+    display: flex;
+    gap: 5%;
+    padding-top: 20px;
+    display: none;
+}
+.body>ul{
+    list-style-type: none;
+    color: rgb(41, 40, 40);
+}
+.body>ul>li>a{
+   
+    color: rgb(118, 115, 115);
+   
+}
+#master{
+    list-style-type:  none;
+    
+}
+#master>li>a{
+    color: rgb(118, 115, 115);
+}
+.icon:hover+.body{
+    display: block;
+    display: flex;
+    justify-content:space-between
+}
+#welcome{
+    text-align: center;
+    padding-top:200px;
+    font-size: 40px;
+}
+#menu{
+    display: none;
+}
+#search_bar{
+    display: none;
+   
+}
+
+
+/*! this section is for styling of Transistions section */
+.list_style>ul{
+    display: flex;
+    justify-content:space-evenly;
+    align-items:center;
+    list-style-type: none;
+    gap: 20%;
+    margin-left: 80px;
+    font-size: 20px;
+
+
+}
+.list_style>ul>li{
+    height: auto;
+    width: auto;
+}
+.list_style>ul>li:hover{
+    cursor: pointer;
+    background-color:  rgb(176, 126, 52);
+    border-radius: 3px;
+    box-shadow: 0 0 3px black;
+}
+
+/* This section  is for styling of transition section */
+.transition>ul{
+    display: flex;
+    justify-content:space-evenly;
+    align-items:center;
+    list-style-type: none;
+    gap: 15%;
+    margin-left: 60px;
+    font-size: 25px;
+}
+.transition>ul>li{
+    height: auto;
+    width: auto;
+}
+.transition>ul>li:hover{
+    cursor: pointer;
+    background-color:  rgb(176, 126, 52);
+    border-radius: 3px;
+    box-shadow: 0 0 3px black;
+}
+
+/*! this is operation section of css  */
+.operation1>ul{
+    display: flex;
+    justify-content:space-evenly;
+    align-items:center;
+    list-style-type: none;
+    gap: 15%;
+    margin-left: 120px;
+    font-size: 25px;
+}
+.operation1>ul>li{
+    height: auto;
+    width: auto;
+}
+.operation1>ul>li:hover{
+    cursor: pointer;
+    background-color:  rgb(176, 126, 52);
+    border-radius: 3px;
+    box-shadow: 0 0 3px black;
+}
+.defect_grp>ul{
+    display: flex;
+    justify-content:space-evenly;
+    align-items:center;
+    list-style-type: none;
+    gap: 15%;
+    margin-left: 120px;
+    font-size: 25px;
+}
+.defect_grp>ul>li{
+    height: auto;
+    width: auto;
+}
+.defect_grp>ul>li:hover{
+    cursor: pointer;
+    background-color:  rgb(176, 126, 52);
+    border-radius: 3px;
+    box-shadow: 0 0 3px black;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 100%;
+    max-width: 350px;
+    height: 100vh;
+    background-color: #f0f0f0;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.heading {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cross-icon {
+    cursor: pointer;
+}
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.card {
+    width: calc(50% - 10px);
+    height: 120px; /* Adjusted height to accommodate image and name */
+    background-color: #fff;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+.card img {
+    max-width: 100%;
+    max-height: 70%;
+    margin-bottom: 5px;
+}
+.card-name {
+    font-weight: bold;
+}
+.signout-button {
+    width: 80%;
+    height: 50px;
+    background-color: blue;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+.sidebar {
+    width: 300px;
+    height: 100%;
+    border: 2px solid black;
+    box-shadow: 2px 3px 2px black;
+   /* display: flex;
+   flex-direction: column;
+  justify-content: center; */
+  padding-top: 30px;
+  
+}
+.work_center{
+height: 10vh;
+border: 2px solid black;
+width: 80%;
+/* display: flex;
+justify-content:space-between;
+margin-left: 30px;
+margin-top: 20px;
+*/
+margin-left: 30px;
+margin-top: 20px;
+border-radius: 5px;
+position: relative;
+
+}
+.work_centerp{
+    display: none;
+}
+.work{
+display: flex;
+justify-content:space-between;
+/* margin-left: 30px;
+margin-top: 20px; */
+padding-top: 15px;
+border-radius: 5px;
+text-align: center;
+font-size:14px;
+font-weight:bold;
+text-decoration: red;
+margin-right: 30px;
+gap: 25px;
+}
+.work1{
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+.work>.fa-solid{
+
+font-size: 30px;
+}
+.work1>.fa-solid{
+
+font-size: 30px;
+}
+.work_hover{
+height: 130px;
+width: 130px;
+border: 1px solid red;
+margin: 0 auto;
+display: block;
+cursor: pointer;
+}
+.work_hover>h2{
+height:33%;
+width: 100%;
+border: 1px solid rgb(207, 191, 191);
+box-shadow: 0 0 5px rgb(204, 144, 144);
+}
+.Operation_hover2{
+height: 130px;
+width: 130px;
+border: 1px solid red;
+margin: 0 auto;
+cursor: pointer;
+display: none;
+}
+.Operation_hover2>h2{
+height:33%;
+width: 100%;
+border: 1px solid rgb(207, 191, 191);
+box-shadow: 0 0 5px rgb(204, 144, 144);
+}
+.oprtn{
+display: flex;
+justify-content:space-between;
+align-items:center;
+}
+.Operations{
+font-size:30px;
+}
+.style-list{
+    height: auto;
+width:80%;
+border: 2px solid black;
+border-radius:3px;
+box-shadow: 0 0 5px rebeccapurple;
+margin-left: 30px;
+margin-top: 20px;
+display: none;
+}
+.style-list>ul{
+    list-style-type: none;
+}
+.style-list>ul>li{
+    padding: 5px;
+}
+.cheker-list{
+height: auto;
+width:80%;
+border: 2px solid black;
+border-radius:3px;
+box-shadow: 0 0 5px rebeccapurple;
+margin-left: 30px;
+margin-top: 20px;
+display:none ;
+}
+.cheker-list>ul{
+list-style-type:none;
+}
+.cheker-list>ul>li{
+padding: 5px;
+} 
+.cheker-list>ul>li>span{
+margin-left: 20px;
+} 
+.work_centerp{
+height: 10vh;
+border: 2px solid black;
+width: 80%;
+display: flex;
+justify-content:space-between;
+margin-left: 30px;
+margin-top: 20px;
+
+border-radius: 5px;
+
+}
+.trackerul{
+height: 150px ;
+width: 150px;
+border: 2px solid black;
+border-radius:3px;
+list-style-type: none;
+display: none !important;
+}
+
+.parent{
+display: flex;
+}
+.righserbar{
+display: none ;
+
+}
+.po{
+display:none ;
+height:12vh;
+
+width: 1200px;
+border: 2px solid white;
+color: rgb(61, 54, 54);
+border-bottom: 1px solid black;
+background-color: white;
+}
+.po>input{
+height: 6vh;
+
+border: 2px solid rgb(83, 77, 77);
+font-size: 15px;
+padding-left: 10px;
+
+}
+
+/* input:focus{
+padding-left: 20px;
+font-size: 20px;
+color: rgb(133, 128, 128);
+
+} */
+.fa-angle-left{
+font-size: 18px;
+}
+.po_1{
+width: 210%;
+height: 50px;
+display: flex;
+border: 2px solid rgb(220, 218, 218);
+
+}
+.po_1>input{
+height:100%;
+width: 100%;
+border: 1px solid white;
+font-size: 20px;
+background-color: aliceblue;
+}
+.sew-line{
+    display: none;
+}
+.allstyle{
+    height: 300px;
+    width: 300px;
+    border: 1px solid rgb(221, 133, 133);
+    flex-direction: column;
+   text-align: center;
+  margin-left: 50%;
+  margin-top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  box-shadow:   5px 5px 5px #888888;
+  border-radius: 5px;
+  
+
+}
+.allstyle>div>textarea{
+margin: 20px;
+text-align: center;
+font-size: 15px;
+color: red;
+border: 1px solid red;
+height: 40px;
+background-color: rgb(245, 217, 217);
+border-radius: 4px;
+
+}
+
+.allstyle>.btn>button{
+    height: 40px;
+    width: 80px;
+    color: red;
+   background-color: rgb(246, 231, 231);
+   border-radius: 3px;
+   border: 2px solid red;
+
+}
+/* .rds{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+} */
+.inspection{
+    height: 70px;
+    width: 100%;
+    background-color: red;
+    margin: 10px;
+    border-radius: 3px;
+    box-shadow:5px 5px 10px  rgb(8, 8, 8);
+    display: flex;
+}
+.inspection>.inspection-left{
+    height:100%;
+    width: 50%;
+    background-color: rgb(231, 219, 219);
+    font-size:30px;
+    display: flex ;
+    align-items: center;
+    
+}
+.inspection>.inspection-left>span{
+  margin-left:10px;
+  box-shadow: 1px 1px 0.1px black;
+  cursor:pointer;
+}
+.inspection>.inspection-right{
+    height:100%;
+    width: 50%;
+    background-color: rgb(169, 230, 165);
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+}
+.inspection>.inspection-right>div{
+    box-shadow: 1px 1px 2px rgb(232, 228, 228);
+}
+.Roving{
+    height:70px;
+    width: 78vmax;
+    background-color: #eae3e3;
+    display: flex;
+    margin: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    font-size: 25px;
+    box-shadow: 5px 5px 10px rgb(169, 165, 165);
+    
+}
+.Roving>div{
+    height: auto;
+    width: auto;
+    background-color: rgb(234, 224, 206);
+    box-shadow: 2px 2px 3px wheat;
+    cursor: pointer;
+}
+
+.imagebox{
+    height: 300px;
+    width: 300px;
+    border: 2px soid rgb(18, 18, 18);
+    background-color: rgb(236, 230, 230);
+    margin-left: 200px;
+    border-radius: 7px;
+}
